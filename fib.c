@@ -5,9 +5,9 @@ int memo[MAX_N] = {0};
 
 int fib(int n){
 //1, 1, 2, 3, 5, 8, 13, 21, ...
-	if (n < 0)				return 0;
-	if (n == 0 || n == 1)	return 1;
-	if (memo[n] > 0)		return memo[n];
+	if (n < 0)					return 0;
+	if (n == 0 || n == 1)		return 1;
+	if (memo[n] > 0)			return memo[n];
 
 	return (memo[n] = fib(n-1) + fib(n-2));
 }
@@ -15,31 +15,32 @@ int fib(int n){
 int main(void){
 	int n = 0;
 
-	//‚Í‚¶‚Ü‚è	
+	//ã¯ã˜ã¾ã‚Š	
 	while(1){
 		printf("n = ");
 		fflush(stdout);
+
 		scanf("%d", &n);
 		getchar();
 
 		if (n > MAX_N) {
-			printf("\"n=46\"ˆÈ“à‚É‚µ‚Ä‰º‚³‚¢\n");
+			printf("\"n=%d\"ä»¥å†…ã«ã—ã¦ä¸‹ã•ã„\n", MAX_N);
 			continue;
 		}
 		break;
 	}
 
-	//ƒAƒiƒEƒ“ƒX
-	printf("ƒtƒBƒ{ƒiƒbƒ`”—ñ‚ğ•\¦‚µ‚Ü‚·B\n");
+	//ã‚¢ãƒŠã‚¦ãƒ³ã‚¹
+	printf("ãƒ•ã‚£ãƒœãƒŠãƒƒãƒæ•°åˆ—ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚\n");
 	getchar();
 
-	//ƒtƒBƒ{ƒiƒbƒ`”—ñ
+	//ãƒ•ã‚£ãƒœãƒŠãƒƒãƒæ•°åˆ—
 	for(int i=0; i<n; i++){
-		printf("%d”Ô–Ú F %d\n", i+1, fib(i));
+		printf("%dç•ªç›® ï¼š %d\n", i+1, fib(i));
 	}
 
-	//‚¨‚í‚è
-	printf("‚¨‚í‚è\n");
+	//ãŠã‚ã‚Š
+	printf("ãŠã‚ã‚Š\n");
 	getchar();
 
 	return 0;
