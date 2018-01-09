@@ -22,7 +22,6 @@ int main(void){
 
 		scanf("%d", &n);
 		getchar();
-
 		if (n > MAX_N) {
 			printf("\"n=%d\"以内にして下さい\n", MAX_N);
 			continue;
